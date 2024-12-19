@@ -13,11 +13,4 @@ spec:
         - op: add
           path: /spec/template/metadata/labels
           value: "tag-name: patch"
-      
-  prune: true
-  timeout: 1m
-  interval: 1m
-  sourceRef:
-    kind: GitRepository
-    name: kustomize-app-demo
 

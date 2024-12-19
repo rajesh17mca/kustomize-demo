@@ -1,0 +1,8 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+resources:
+  - ./deployment.yaml
+  - ./service.yaml
+  
+patches:
+  - ./patch.yaml
