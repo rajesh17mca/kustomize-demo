@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: kustomize-app-demo
+  namespace: kustomize-demo
+spec:
+  interval: 30s
+  ref:
+    branch: main
+  url: https://github.com/rajesh17mca/kustomize-demo.git

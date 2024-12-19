@@ -1,0 +1,13 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: kustomize-app-demo
+  namespace: kustomize-demo
+spec:
+  interval: 30s
+  path: ./application
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: kustomize-app-demo

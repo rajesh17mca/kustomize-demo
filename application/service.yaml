@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: streamlit-app-service
+  namespace: kustomize-demo
+  labels:
+    app: streamlit-app
+spec:
+  selector:
+    app: streamlit-app
+  type: NodePort
+  ports:
+  - name: streamlit-port
+    port: 80
+    targetPort: 8501
